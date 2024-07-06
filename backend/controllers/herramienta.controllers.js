@@ -1,25 +1,6 @@
 class HerramientaController {
     constructor() {}
 
-    operarMenuHerramienta(opcion) {
-        const ui = new UIPrincipal();
-        
-        switch (opcion) {
-            case 1:
-                ui.agregarHerramienta();
-                break;
-            case 3:
-                ui.mostrarHerramienta();
-                break;
-            case 4:
-                ui.buscarHerramientaId();
-                break;
-            case 5:
-                ui.eliminarHerramienta();
-                break;
-        }
-    }
-
     async agregarHerramienta(herramienta) {
         try {
             await Herramienta.create(herramienta);
@@ -27,7 +8,6 @@ class HerramientaController {
             console.error('Error agregando Herramienta:', err);
         }
     }
-
 
     async mostrarHerramienta() {
         try {
