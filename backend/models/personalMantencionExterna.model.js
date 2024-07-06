@@ -1,7 +1,7 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const db = require('../config/db');
 
-const PersonalMntnExterna = db.define('PersonalMntnExterna', {
+const PersonalMantencionExterna = db.define('PersonalMantencionExterna', {
     idEmpresaExterna: {
         type: DataTypes.STRING(12),
         primaryKey: true,
@@ -30,4 +30,4 @@ const PersonalMntnExterna = db.define('PersonalMntnExterna', {
     timestamps: false,
 });
 
-module.exports = PersonalMntnExterna;
+module.exports = PersonalMantencionExterna;
