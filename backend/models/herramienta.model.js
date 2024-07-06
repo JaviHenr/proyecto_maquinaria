@@ -1,37 +1,38 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const db = require('../config/db');
 
-const Maquinaria = db.define('Maquinaria', {
-    idActivoM: {
-        type: DataTypes.STRING(15),
+const Herramienta = db.define('Herramienta', {
+    idActivoH: {
+        type: DataTypes.INTEGER,
         primaryKey: true,
+        autoIncrement: true,
     },
     numInventario: {
         type: DataTypes.INTEGER,
         allowNull: false,
     },
-    estatus: {
-        type: DataTypes.STRING(20),
+    estatus: { 
+        type: DataTypes.STRING,
         allowNull: false,
     },
     nombre: {
-        type: DataTypes.STRING(20),
+        type: DataTypes.STRING,
         allowNull: false,
     },
     componentes: {
-        type: DataTypes.STRING(200),
+        type: DataTypes.STRING,
         allowNull: false,
     },
     categoria: {
-        type: DataTypes.STRING(50),
-        allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: false,  
     },
     marca: {
-        type: DataTypes.STRING(20),
+        type: DataTypes.STRING,
         allowNull: false,
     },
     modelo: {
-        type: DataTypes.STRING(30),
+        type: DataTypes.STRING,
         allowNull: false,
     },
     numSerie: {
@@ -39,15 +40,15 @@ const Maquinaria = db.define('Maquinaria', {
         allowNull: false,
     },
     centroDeCosto: {
-        type: DataTypes.STRING(50),
+        type: DataTypes.STRING,
         allowNull: false,
     },
     ubicacion: {
-        type: DataTypes.STRING(100),
+        type: DataTypes.STRING,
         allowNull: false,
     },
 }, {
     timestamps: true,
 });
 
-module.exports = Maquinaria;
+module.exports = Herramienta;

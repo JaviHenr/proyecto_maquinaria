@@ -2,23 +2,23 @@ const { Sequelize, DataTypes } = require('sequelize');
 const db = require('../config/db');
 
 const Sala = db.define('Sala', {
-    idSala: {
+    numeroSala: {
         type: DataTypes.INTEGER,
-        autoIncrement: true,
         primaryKey: true,
+        autoIncrement: true,
     },
-    marcaSala: {
-        type: DataTypes.STRING,
+    descripcionSala: {
+        type: DataTypes.STRING(100),
         allowNull: false,
     },
-    modeloSala: {
-        type: DataTypes.STRING,
+    tipoSala: {
+        type: DataTypes.STRING(20),
         allowNull: false,
     },
-    tamañoSala: {
-        type: DataTypes.INTEGER,
+    equipamiento: {
+        type: DataTypes.STRING(20),
         allowNull: false,
-    }
+    },
 }, {
     timestamps: true,
 });
