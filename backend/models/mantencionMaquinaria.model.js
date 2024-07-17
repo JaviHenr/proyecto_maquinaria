@@ -1,7 +1,7 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const db = require('../config/db');
 
-const PiezasMantenimiento = db.define('PiezasMantenimiento', {
+const MantencionMaquinaria = db.define('MantencionMaquinaria', {
     idActivoM: {
         type: DataTypes.STRING(15),
         primaryKey: true,
@@ -18,4 +18,4 @@ const PiezasMantenimiento = db.define('PiezasMantenimiento', {
     timestamps: false,
 });
 
-module.exports = PiezasMantenimiento;
+module.exports = MantencionMaquinaria;
