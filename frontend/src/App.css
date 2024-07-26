@@ -1,0 +1,257 @@
+/* Definiciones para colorear la pagina */
+:root {
+    --background: #103fc05d;                        /* Fondo de la pagina                                   */
+    --bgnavbar-principal: #016eb8;                  /* Fondo de la sidebar                                  */
+    --navbarbutton-borders: rgba(0, 0, 0, 0.1);     /* Color de los bordes de los botones de la sidebar     */
+    --navbarbuttonborders-hover: #ffffff;            /* Fondo de los botones de la sidebar (al pasar)        */
+    --navbarlinea: #dfdf00;                         /* Color de la linea de la sidebar                      */
+    --maincontent-background: #0000009d;            /* Fondo del contenido principal                        */
+    --tablebutton-hover: #000000;                   /* Fondo de los botones de la tabla                     */
+}
+
+/* Estilos de página y globales */
+*{
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    background-color: var(--background);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Estilos de la sidebar */
+.wrapper .sidenav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 19.5vw;
+    height: 100vh;
+    background: var(--bgnavbar-principal);
+}
+
+/* estilo para el logo ubb*/
+.wrapper .sidenavlogo{
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+/* estilo para el texto CITECUBB*/
+.wrapper .sidenav h1{
+    color: #ffffff;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* estilo para PEPLAB*/
+.wrapper .sidenav h3{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-bottom: 2px dotted rgba(0, 0, 0, 0.349);
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+}
+
+/* estilo para la lista de la sidebar*/
+.wrapper .sidenav ul li{
+    list-style: none;
+    padding: 15px;
+    border-bottom: 1px solid var(--navbarbutton-borders);
+    border-top: 1px solid var(--navbarbutton-borders);
+    
+}
+.wrapper .sidenav ul li:hover{
+    border-bottom: 1px solid var(--navbarbuttonborders-hover);
+    border-top: 1px solid var(--navbarbuttonborders-hover);
+    background-color: rgb(54, 54, 54);
+    color: rgb(0, 0, 0)
+}
+
+/*iconos*/
+i{
+    margin-right: 10px;
+}
+
+/* Linea amarilla en la sidebar */
+.wrapper .navbar-line{
+    position: relative;
+    background-color: var(--navbarlinea);
+    width: 5px;
+    height: 100vh;
+    margin-left: 19.5vw;
+    
+}
+
+/* Estilos del contenido principal */
+.main-content{
+    display: block;
+    position: fixed;
+    width: 74vw;
+    height: 500px;
+    border-radius: 15px;
+    background-color: var(--maincontent-background);
+    margin: 3vw 0vw 0vw 3vw;
+    padding: 5px;
+}
+
+ /* Estilos del formulario*/
+
+ /*Se estila el titulo de /section id=formulario_nr/  */
+ #formulario_nr h2{
+    padding: 10px;
+    color: white;
+    text-align: center;
+ }
+
+ /*Se estiliza el formulario en /section id=formulario_nr/  */
+ #formulario_nr form{
+    padding: 10px;
+    color: white;
+    text-align: center;
+ }
+
+ /* Se estila el titulo de la /section id=registros/  */
+ #registros h2{
+    padding: 30px;
+    color: white;
+    text-align: center;
+ }
+
+/* Estilos de la tabla de registros en el /section id=registros/  */
+#registros table{
+    width: 95%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid #000000;
+}
+
+/* se estila th (table header) dentro de la tabla en el /section id=registros/ */
+#registros table th{
+    background-color: #dfdf00b6;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #000000;
+}
+/* se estila td (table data) dentro de la tabla en el /section  id=registros/ */
+
+#registros table td{
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #000000;
+    background-color: #016eb8;
+}
+
+/* Botones de modificacion en la tabla de registros */
+.buttonedit{
+    background-color: white;
+    color: black;
+    border: none;
+    margin: 5px 0px 10px 0px;
+    height: 25px;
+    width: 100px;
+    border-radius: 2px;
+}
+
+/*efecto pulsacion*/
+.buttonedit:hover{
+    background-color: #dfdf00;
+    color: black;
+    cursor: pointer;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.buttonedit:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+
+
+
+
+
+/* Estilo para el contenedor principal */
+.contenedor {
+    width: 90%; /* Ancho adaptativo para el contenedor */
+    max-width: 800px; /* Ancho máximo para el contenedor */
+    background-color: #e67d37; /* Fondo blanco para el contenedor */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    padding: 20px; /* Espaciado interno */
+    display: flex;
+    justify-content: center;
+}
+/* Estilo para la sección */
+.seccion {
+    padding-bottom: 20px; /* Padding inferior para separación interna */
+    border-bottom: 1px solid #e0e0e0; /* Línea inferior para separar secciones */
+    width: 80%;
+}
+/* Elimina el borde y el padding inferior de la última sección */
+.seccion:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+/* Estilo para el encabezado de la sección */
+.seccion h2 {
+    margin-top: 0; /* Elimina el margen superior */
+    color: #ffffff; /* Color del texto del encabezado */
+    font-size: 1.5em; /* Tamaño de la fuente del encabezado */
+    border-bottom: 2px solid #e0e0e0; /* Línea debajo del encabezado */
+    padding-bottom: 10px; /* Espaciado debajo del encabezado */
+}
+/* Estilo para la tabla */
+table {
+    width: 100%; /* Ancho completo de la tabla */
+    border-collapse: collapse; /* Elimina los espacios entre bordes de celdas */
+    margin-top: 10px; /* Margen superior para separar de otros elementos */
+}
+.tabla-reserva {
+    width: 100%;
+    border-collapse: collapse;
+}
+/* Estilo para las celdas de la tabla */
+th, td {
+    padding: 10px; /* Espaciado interno en las celdas */
+    text-align: center; /* Centra el texto dentro de las celdas */
+    border: 1px solid #00000037; /* Borde de las celdas */
+}
+td {
+    background-color: #4651a3; /* Fondo de las celdas de datos */
+    color: #ffffff; /* Color del texto de las celdas de datos */
+}
+/* Estilo para las filas de encabezado */
+th {
+    background-color: #f4f4f4; /* Fondo de las celdas de encabezado */
+    color: #281fda; /* Color del texto de las celdas de encabezado */
+    padding: 12px;
+    text-align: left;
+}
+/* Estilo para las filas alternadas */
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Fondo alternado para filas pares */
+}
+
+.tabla-header {
+    text-align: left;
+    padding: 8px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+}
+
+.tabla-data {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+}

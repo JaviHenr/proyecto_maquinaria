@@ -18,23 +18,23 @@ export const useReservas = () => {
 
 export const ReservaMaquinariaContextProvider = ({ children }) => {
 
-    const [reservas, setReserva] = useState([])
+    const [reservas, setReservas] = useState([])
 
     async function loadReservas() {
         const response = await getReservaMaquinariasRequest();
-        setReserva(response.data);
+        setReservas(response.data);
     }
 
-    const deleteReservas = async (id) => {
+    const deleteReserva = async (id) => {
         try{
             await deleteReservaMaquinariaRequest(id);
-            setReserva(reservas.filter(reserva => reserva.id !== id));
+            setReservas(reservas.filter(reserva => reserva.id !== id));
         } catch (error) {
             console.error(error)
         }
     }
 
-    const createReservas = async (reserva) => {
+    const createReserva = async (reserva) => {
         try {
             await createReservaMaquinariaRequest(reserva);
         } catch (error) {
@@ -65,8 +65,8 @@ export const ReservaMaquinariaContextProvider = ({ children }) => {
             value={{ 
                 reservas,
                 loadReservas,
-                deleteReservas,
-                createReservas,
+                deleteReserva,
+                createReserva,
                 getReserva,
                 updateReserva
             }}
@@ -75,4 +75,3 @@ export const ReservaMaquinariaContextProvider = ({ children }) => {
         </ReservaMaquinariaContext.Provider>
     );
 };
-

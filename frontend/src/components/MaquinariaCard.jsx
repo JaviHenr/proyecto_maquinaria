@@ -29,7 +29,7 @@ function MaquinariaCard({ maquinaria }) {
             </button>
             <button
                 className="bg-slate-300 px-2 py-1 text-black"
-                onClick={() => navigate(`/edit/${maquinaria.ID_ACTIVO_M}`)}
+                onClick={() => navigate(`maquinaria/edit/${maquinaria.ID_ACTIVO_M}`)}
             >
                 Editar
             </button>   
