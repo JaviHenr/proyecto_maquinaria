@@ -13,6 +13,7 @@ Para base de datos:
     mysql -u root --password
 
 Ejecución Docker:
+    docker-compose up
     docker ps
     docker exec -it mymysql bash
     
