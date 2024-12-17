@@ -7,3 +7,8 @@ RECORDAR INSTALAR:
 
 Para ejecucion:
   npm run dev
+
+
+docker ps
+docker exec -it mymysql bash
+mysql -u root --password
