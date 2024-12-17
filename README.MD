@@ -14,7 +14,7 @@ Para base de datos:
 
 Ejecución Docker:
     docker-compose up
-    docker ps
-    docker exec -it mymysql bash
+    docker-compose ps
+    docker-compose exec -it mymysql bash
     
     
