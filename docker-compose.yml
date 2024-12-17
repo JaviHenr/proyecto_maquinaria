@@ -1,0 +1,25 @@
+services:
+  backend:
+    build: ./backend
+    container_name: mern-backend
+    ports:
+      - "4000:4000"
+    command: sh -c "npm install -g nodemon && npm install && npm run dev "
+    depends_on:
+      - mysqldb
+        
+  mysqldb:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=contraseña
+      - MYSQL_DATABASE=Proyectodb
+    ports:
+      - "3307:3306"
+  
+  frontend:
+    build: ./frontend
+    container_name: mern-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
